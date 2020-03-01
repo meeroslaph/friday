@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="FRI:DAY Test Suite" parallel="methods" thread-count="3" data-provider-thread-count="2">
+    <test name="Tests">
+        <packages>
+            <package name="tests.*"/>
+        </packages>
+    </test>
+</suite>

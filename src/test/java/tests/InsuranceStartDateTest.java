@@ -31,7 +31,7 @@ public class InsuranceStartDateTest extends BaseTest {
         assertThat(selectPreconditionPage.isSubmitButtonEnabled()).isFalse();
     }
 
-    @DataProvider(name = "valid-dates")
+    @DataProvider(name = "valid-dates", parallel = true)
     public static Object[][] validDatesDataProvider() {
         return new Object[][]{
             {date.format(formatter)},
@@ -39,7 +39,7 @@ public class InsuranceStartDateTest extends BaseTest {
         };
     }
 
-    @DataProvider(name = "invalid-dates")
+    @DataProvider(name = "invalid-dates", parallel = true)
     public static Object[][] invalidDatesDataProvider() {
         return new Object[][]{
             {date.minusDays(1).format(formatter), "Hups! Dieses Datum liegt in der Vergangenheit. Bitte überprüfe deine Eingabe."},
