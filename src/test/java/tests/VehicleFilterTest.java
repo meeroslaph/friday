@@ -18,7 +18,7 @@ public class VehicleFilterTest extends BaseTest {
 
         List<String> filteredVehicles = selectVehiclePage.getFilteredVehiclesList();
 
-        assertThat(filteredVehicles.size()).isEqualTo(2);
+        assertThat(filteredVehicles.size()).isEqualTo(1);
         assertThat(filteredVehicles.get(0)).isEqualTo(brand);
         assertThat(selectVehiclePage.isUnknownVehicleWarningDisplayed()).isFalse();
     }
