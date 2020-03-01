@@ -25,7 +25,7 @@ public class SalesFunnelTest extends BaseTest {
         assertThat(enterBirthDatePage.isBirthdayInputDisplayed()).isTrue();
     }
 
-    @DataProvider(name = "cars")
+    @DataProvider(name = "cars", parallel = true)
     public static Object[][] carsDataProvider() {
         return new Object[][]{
             {new Car("FORD", "Focus", "Kombi", "Sonstiges", "110 kW / 150 PS", "FOCUS TURNIER 1.6", "HSN: 8566, TSN: AWO")},
