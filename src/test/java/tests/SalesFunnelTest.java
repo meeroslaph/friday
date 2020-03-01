@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SalesFunnelTest extends BaseTest {
 
     @Test(dataProvider = "cars")
-    public void userShouldBeAbleToSelectCar(Car car) {
+    public void userShouldBeAbleToSelectCarForInsurance(Car car) {
         EnterBirthDatePage enterBirthDatePage = selectPreconditionPage
             .submitSelectPreconditionPage()
             .submitSelectRegisteredOwnerPage()
