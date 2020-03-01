@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
@@ -7,9 +8,14 @@ import static com.codeborne.selenide.Selenide.$;
  * Composition Over Inheritance principle.
  */
 class CommonElements {
+    private final By submitButton = By.cssSelector("button[type='submit']");
 
     void submit() {
-        $("button[type='submit']").click();
+        $(submitButton).click();
+    }
+
+    boolean isSubmitButtonActive() {
+        return !$(submitButton).attr("class").contains("Button__disabled");
     }
 
 }
