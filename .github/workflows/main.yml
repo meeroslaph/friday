@@ -10,6 +10,5 @@ jobs:
     - name: Start Selenoid server
       uses: Xotabu4/selenoid-github-action@v1
     - uses: actions/checkout@v1
-    - run: npm ci  
     - name: Run tests
       run: mvn clean install
