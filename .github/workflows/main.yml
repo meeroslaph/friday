@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - '*'
+  watch:
+    types: [started]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Run browser tests
+    steps:
+    - name: Start Selenoid server
+      uses: Xotabu4/selenoid-github-action@v1
+    - uses: actions/checkout@v1
+    - name: Run tests
+      run: mvn clean test
