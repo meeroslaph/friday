@@ -18,6 +18,7 @@ abstract class BaseTest {
         Configuration.timeout = 10000;
         Configuration.startMaximized = true;
         Configuration.browser = Browsers.CHROME;
+        Configuration.remote = "http://localhost:4444/wd/hub";
 
         open(baseUrl);
         selectPreconditionPage = new SelectPreconditionPage();
