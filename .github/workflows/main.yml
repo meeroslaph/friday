@@ -16,4 +16,4 @@ jobs:
       uses: Xotabu4/selenoid-github-action@v1
     - uses: actions/checkout@v1
     - name: Run tests
-      run: mvn clean test
+      run: mvn clean test -Denv=remote

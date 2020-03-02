@@ -36,6 +36,12 @@
             <artifactId>guava</artifactId>
             <version>28.2-jre</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.saucelabs</groupId>
+            <artifactId>saucerest</artifactId>
+            <version>1.0.44</version>
+        </dependency>
     </dependencies>
 
     <build>
