@@ -19,6 +19,14 @@ import static com.codeborne.selenide.Selenide.open;
 abstract class BaseTest {
     SelectPreconditionPage selectPreconditionPage;
 
+    /**
+     * The method runs before a test suite execution starts. It adds {@link AllureSelenide} listener needed for Allure
+     * report generation and prepares a browser object according to the desired environment.
+     *
+     * Throws {@link IllegalStateException} if the desired environment is not supported.
+     * @see SelenideLogger
+     * @see Config
+     */
     @BeforeSuite(alwaysRun = true)
     public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));

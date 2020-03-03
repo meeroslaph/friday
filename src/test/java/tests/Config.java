@@ -1,5 +1,8 @@
 package tests;
 
+/**
+ * Configuration class representing browser and test environment system properties.
+ */
 abstract class Config {
     public static final String ENV = System.getProperty("env", "local");
     public static final String REMOTE = System.getProperty("remote", "http://localhost:4444/wd/hub");
