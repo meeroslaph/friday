@@ -1,5 +1,7 @@
 package tests;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +21,8 @@ abstract class BaseTest {
 
     @BeforeSuite(alwaysRun = true)
     public void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(false));
+
         baseUrl = Config.BASE_URL;
         browser = Config.BROWSER;
         startMaximized = Boolean.parseBoolean(Config.START_MAXIMIZED);
