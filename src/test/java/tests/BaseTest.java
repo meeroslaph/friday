@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 abstract class BaseTest {
     SelectPreconditionPage selectPreconditionPage;
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setUp() {
         baseUrl = Config.BASE_URL;
         browser = Config.BROWSER;
@@ -49,7 +49,7 @@ abstract class BaseTest {
         }
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void openHomePage() {
         open(baseUrl);
         selectPreconditionPage = new SelectPreconditionPage();
