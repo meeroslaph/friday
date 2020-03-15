@@ -7,14 +7,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import pages.SelectPreconditionPage;
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Configuration.browser;
-import static com.codeborne.selenide.Configuration.browserCapabilities;
-import static com.codeborne.selenide.Configuration.remote;
-import static com.codeborne.selenide.Configuration.startMaximized;
-import static com.codeborne.selenide.Configuration.timeout;
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
+
+import static com.codeborne.selenide.Configuration.*;
+import static com.codeborne.selenide.Selenide.*;
 
 abstract class BaseTest {
     SelectPreconditionPage selectPreconditionPage;
@@ -64,6 +59,7 @@ abstract class BaseTest {
     @BeforeMethod(alwaysRun = true)
     public void openHomePage() {
         open(baseUrl);
+        $("#uc-btn-accept-banner").click();
         selectPreconditionPage = new SelectPreconditionPage();
     }
 
