@@ -13,7 +13,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.7.0</testng.version>
         <selenide.version>5.7.0</selenide.version>
         <assertj.version>3.15.0</assertj.version>
         <guava.version>29.0-jre</guava.version>
